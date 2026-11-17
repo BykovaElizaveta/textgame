@@ -1,6 +1,10 @@
 package main
 
-import "strings"
+import (
+	"flag"
+	"os"
+	"strings"
+)
 
 type Room struct {
 	name        string
@@ -114,10 +118,9 @@ var playerCommand map[string]func([]string) string = map[string]func([]string) s
 }
 
 func main() {
-
-	initGame()
-
-	_ = handleCommand("some command")
+	registerFlags(flag.CommandLine)
+	flag.Parse()
+	runGame(os.Stdin, os.Stdout)
 }
 
 func initGame() {
