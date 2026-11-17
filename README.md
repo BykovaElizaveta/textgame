@@ -35,3 +35,13 @@ go run . -color      # цвета принудительно (например, 
 ```bash
 go test ./...
 ```
+
+## Скриншоты
+
+Меню:
+
+![Меню и список команд](docs/screenshots/01-menu.png)
+
+Геймплей:
+
+![Карта и инвентарь](docs/screenshots/02-gameplay.png)
